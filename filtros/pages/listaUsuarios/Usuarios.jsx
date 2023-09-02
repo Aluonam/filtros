@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styles from '@/styles/Home.module.css'
+import Tabla from '@/components/Tabla'
 
 
 const Usuarios = () => {
@@ -19,11 +20,11 @@ const Usuarios = () => {
       catch(error){console.log("error detectado", error)}
       
   }
-  
     
   return (
     <main className={`${styles.main}`}>
       Usuarios
+      <Tabla datosAPI={datosAPI}></Tabla>
     </main>
   )
 }
