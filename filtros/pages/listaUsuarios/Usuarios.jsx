@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import styles from '@/styles/Home.module.css'
 import Tabla from '@/components/Tabla'
+import FiltrosUsuarios from '@/components/FiltrosUsuarios'
 
 
 const Usuarios = () => {
@@ -24,6 +25,7 @@ const Usuarios = () => {
   return (
     <main className={`${styles.main}`}>
       Usuarios
+      <FiltrosUsuarios setDatosUsuario={setDatosAPI}></FiltrosUsuarios>
       <Tabla datosAPI={datosAPI}></Tabla>
     </main>
   )

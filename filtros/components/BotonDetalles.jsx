@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Modal } from 'antd';
+import Contador from './Contador';
 
 const BotonDetalles = ({datosUsuarioActual}) => {
 
@@ -24,7 +25,9 @@ const BotonDetalles = ({datosUsuarioActual}) => {
         <p>email: {datosUsuarioActual.email}</p>
         <p>username: {datosUsuarioActual.login.username}</p>
         <p>password: {datosUsuarioActual.login.password}</p>
+        <Contador ></Contador>
       </Modal>
+
     </>
   );
 };
