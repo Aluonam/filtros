@@ -11,10 +11,13 @@ const Usuarios = () => {
   }, [])
 
   const llamadaAPI = async () => {
+    try{
       const url = `https://randomuser.me/api/?results=100`;
       const llamada = await fetch(url);
       const datos = await llamada.json()
-      setDatosAPI(datos.results)
+      setDatosAPI(datos.results)}
+      catch(error){console.log("error detectado", error)}
+      
   }
   
     
