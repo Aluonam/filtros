@@ -18,7 +18,6 @@ const Tabla = ({datosAPI}) => {
 
   return (
     <>
-    <div>Tabla</div>
     
             <table>
                 <thead>

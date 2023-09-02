@@ -1,11 +1,22 @@
 import React from 'react'
 
-const FiltrosUsuarios = () => {
+const FiltrosUsuarios = ({setDatosUsuario}) => {
 
 
-    
+    const handleMujeres = () => {
+        setDatosUsuario((valorActual)=>valorActual.filter((elemActual)=> elemActual.gender==="female"))
+    }
+
+    const handleHombres = () => {
+        setDatosUsuario((valorActual)=>valorActual.filter((elemActual)=> elemActual.gender==="male"))
+    }
+
+
   return (
-    <div>FiltrosUsuarios</div>
+    <>
+    <button onClick={()=>{handleMujeres()}}>Mujeres</button>
+    <button onClick={()=>{handleHombres()}}>Hombres</button>
+    </>
   )
 }
 
