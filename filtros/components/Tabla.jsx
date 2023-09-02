@@ -1,4 +1,5 @@
 import React from 'react'
+import BotonDetalles from './BotonDetalles'
 
 const Tabla = ({datosAPI}) => {
 
@@ -9,7 +10,7 @@ const Tabla = ({datosAPI}) => {
             <td>{elementoActual.name.first} {elementoActual.name.last}</td>
             <td>{elementoActual.dob.age}</td>
             <td>{elementoActual.registered.date}</td>
-            <td>Botón detalles</td>
+            <td><BotonDetalles datosUsuarioActual={elementoActual}></BotonDetalles></td>
            </tr>
         )
     })
